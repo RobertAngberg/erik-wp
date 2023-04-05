@@ -1,0 +1,166 @@
+body {
+  color: #404040;
+  font-family: "Bitter", serif;
+  font-size: 1.2rem;
+  line-height: 1.7;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* Den här behövs för att centrera menyn */
+#site-navigation {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-navigation {
+  width: 100%;
+  background: url(http://test.local/wp-content/uploads/menubg.jpg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+#primary-menu {
+  width: 100%;
+  height: 75px;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+#primary-menu li a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #fff;
+  padding: 0px 20px;
+}
+
+#primary-menu li a:hover {
+  color: #aaa;
+}
+
+/* Dropdown */
+nav {
+  display: flex;
+}
+
+nav a {
+  transition: all 0.5s;
+}
+
+li.current-menu-item a {
+  color: #a59657 !important;
+}
+
+nav a:hover {
+  color: #a59657 !important;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li ul {
+  display: block;
+  visibility: hidden;
+  position: absolute;
+  margin-left: -50px;
+  opacity: 0;
+  transition: all 0.7s;
+}
+
+nav ul li:hover ul {
+  visibility: visible;
+  display: block;
+  margin: 0;
+  padding: 10px;
+  border-radius: 2px;
+  background-color: #fff;
+  opacity: 0.85;
+  box-shadow: 0px 5px 15px #333;
+}
+
+nav ul li:hover ul a {
+  color: #000 !important;
+}
+
+nav ul li:hover ul a:hover {
+  color: #a59657 !important;
+}
+/* Slut dropdown */
+
+input {
+  height: 30px;
+  width: 80%;
+}
+
+textarea {
+  height: 150px;
+  width: 80%;
+}
+
+h1,
+h2 {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.mob-menu-logo-holder {
+  background: url(http://test.local/wp-content/uploads/menubg.jpg);
+  height: 70px !important;
+  margin-bottom: 1000px !important;
+}
+
+.mob-standard-logo {
+  margin-top: 8px;
+}
+
+i.mob-icon-menu {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.wpcf7-form input,
+.wpcf7-form textarea {
+  width: 100% !important;
+}
+
+@media only screen and (min-width: 1000px) {
+  main {
+    width: 66%;
+    margin: 0 auto;
+  }
+
+  #primary-menu li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #fff;
+    padding: 0px 15px;
+  }
+
+  img.custom-logo {
+    width: 100%;
+    height: auto;
+  }
+
+  .custom-logo {
+    display: none;
+  }
+
+  .home .custom-logo {
+    display: initial;
+  }
+}
